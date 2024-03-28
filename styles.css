@@ -1,0 +1,45 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+  
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent body from scrolling */
+}
+  
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 8%;
+    background-color: grey; /* Light gray */
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.main {
+    height: 87%;
+    background-color: beige; /* Lighter gray */
+    overflow-y: auto;
+    padding-top:8%;
+}
+
+.footer {
+    height: 5%;
+    background-color: grey;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.library {
+    display: flex;
+    flex-direction: row;
+}
+
+.bookCard {
+    border: 1px solid black;
+}

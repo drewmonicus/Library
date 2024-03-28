@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">yi
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">library</div>
+        <button id="new-book-btn">+</button>
+    </div>
+    <div class="main">
+        <dialog class = "modal" id = "modal">
+            <form method = "dialog">
+                <input type="text" id = "title" placeholder="Title">
+                <input type="text" id = "author" placeholder="Author">
+                <input type="text" id = "pages" placeholder="Pages">
+                <label for="title">Read:</label>
+                <input type ="checkbox" id = "read">
+                <input type="submit" value="Add Book" id = "submit">
+            </form>
+        </dialog>
+        <div class="library"></div>
+    </div>
+    <div class="footer"></div>
+
+    <script src = "./script.js"></script>  
+</body>
+</html>
