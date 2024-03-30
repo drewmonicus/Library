@@ -4,9 +4,20 @@ html, body {
 }
   
 body {
+    background-color:rgba(248,177,137,255);
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0) 70%);
     display: flex;
     flex-direction: column;
     overflow: hidden; /* Prevent body from scrolling */
+}
+
+.header img {
+    height: 75px;
+    width: 75px;
+}
+
+.header h1 {
+    font-family: 'Courier New', Courier, monospace;
 }
   
 .header {
@@ -14,22 +25,33 @@ body {
     flex-direction: row;
     justify-content: space-between;
     height: 8%;
-    background-color: grey; /* Light gray */
     position: fixed;
     top: 0;
     width: 100%;
+    align-items: center;
+}
+
+.header button {
+    margin-right: 30px;
+    height: 60%;
+    border-radius: 30px;
+    border-color: white;
+    border: 2px solid black;
+}
+
+
+.logo {
+    display: flex;
 }
   
 .main {
     height: 87%;
-    background-color: beige; /* Lighter gray */
     overflow-y: auto;
     padding-top:8%;
 }
 
 .footer {
     height: 5%;
-    background-color: grey;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -37,9 +59,61 @@ body {
 
 .library {
     display: flex;
-    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.bookCard {
-    border: 1px solid black;
+.bookCard, .filler{
+    flex: 0 0 calc(25% - 20px);
+    margin-bottom: 20px; /* Add space between rows of cards */
+    background-color: #ffffff; /* Background color of the card */
+    border: 1px solid #dddddd; /* Border around the card */
+    border-radius: 5px; /* Rounded corners for the card */
+    padding: 20px; /* Padding inside the card */
+    box-sizing: border-box; /* Include border and padding in the total width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+/* Styles for card content */
+.bookCard .title, .filler .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.bookCard .author, .filler .author {
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+.bookCard .pages, .filler .pages {
+    margin-bottom: 10px;
+}
+
+.bookCard .readStatus, .filler .readStatus {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.bookCard .remove-btn, .filler .remove-btn {
+    background-color: palevioletred;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bookCard .readStatus:hover {
+    background-color: #0056b3;
+}
+
+.bookCard .remove-btn:hover, .filler .remove-btn:hover {
+    background-color: palevioletred;
 }

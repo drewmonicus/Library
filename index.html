@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">yi
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +8,36 @@
 </head>
 <body>
     <div class="header">
-        <div class="logo">library</div>
-        <button id="new-book-btn">+</button>
+        <div class="logo">
+        <img src="./books.png" alt="">
+        <h1>Zlibrary</h1>
+        </div>
+        <button id="new-book-btn">+ New Book</button>
     </div>
     <div class="main">
         <dialog class = "modal" id = "modal">
             <form method = "dialog">
-                <input type="text" id = "title" placeholder="Title">
-                <input type="text" id = "author" placeholder="Author">
-                <input type="text" id = "pages" placeholder="Pages">
-                <label for="title">Read:</label>
+                <input type="text" id = "title" placeholder="Title" required>
+                <input type="text" id = "author" placeholder="Author" required>
+                <input type="text" id = "pages" placeholder="Pages" required>
+                <label for="title">Read?</label>
                 <input type ="checkbox" id = "read">
                 <input type="submit" value="Add Book" id = "submit">
             </form>
         </dialog>
-        <div class="library"></div>
+        <div class="library">
+            <div class="filler">
+                <div class = "title">Harry Potter</div>
+                <div class = "author">J.K. Rowling</div>
+                <div class = "pages">323 Pages</div>
+                <button class = "readStatus">Read?</button>
+                <button class = "remove-btn">X</button>
+            </div>
+        </div>
     </div>
-    <div class="footer"></div>
+    <div class="footer">
+    
+    </div>
 
     <script src = "./script.js"></script>  
 </body>
